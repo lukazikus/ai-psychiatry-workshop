@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI for Psychiatry Workshop - EMBS 2026</title>
+    <meta name="description" content="AI for Psychiatry: Bridging Computational Models and Clinical Care workshop, co-located with EMBS 2026. Join leading clinicians and ML researchers in San Diego.">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AI for Psychiatry Workshop - EMBS 2026">
+    <meta property="og:description" content="Bridging Computational Models and Clinical Care. December 6, 2026 in San Diego, California.">
+    
+    <!-- CDNs -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">AI<span>.Psychiatry</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#overview">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#speakers">Speakers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#schedule">Schedule</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#organizers">Organizers</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="updatesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="live-dot"></span> Updates
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end updates-dropdown" aria-labelledby="updatesDropdown" id="news-dropdown-container">
+                            <div class="updates-title">Live Updates</div>
+                            <div id="dropdown-news-list">
+                                <!-- Populated dynamically by app.js -->
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home">
+        <canvas id="synapse-canvas"></canvas>
+        <div class="container">
+            <div class="workshop-title glass-panel">
+                <h1 id="hero-title">AI for Psychiatry</h1>
+                <div class="subtitle" id="hero-subtitle">Bridging Computational Models and Clinical Care</div>
+                <div class="workshop-meta">
+                    <div>
+                        <i class="far fa-calendar-alt"></i>
+                        <span id="hero-date">December 6, 2026</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span id="hero-location">San Diego, California (Co-located with EMBS 2026)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Overview / About Section -->
+        <section id="overview">
+            <div class="container">
+                <h2 class="section-title">Workshop <span>Overview</span></h2>
+                <div class="overview-grid">
+                    <div class="overview-text">
+                        <p id="about-text-p">
+                            <!-- Populated dynamically by app.js -->
+                        </p>
+                    </div>
+                    <div class="overview-highlights">
+                        <div class="glass-panel highlight-box">
+                            <div class="highlight-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div>
+                                <div class="highlight-title">Translational Science</div>
+                                <div class="highlight-desc">Moving deep clinical biomarkers from sandbox codebases into real patient therapeutic settings.</div>
+                            </div>
+                        </div>
+                        <div class="glass-panel highlight-box">
+                            <div class="highlight-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div>
+                                <div class="highlight-title">Modality Integration</div>
+                                <div class="highlight-desc">Merging MRI neural traces, audio recordings, vocal stress metrics, and text embeddings.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Speakers Section -->
+        <section id="speakers">
+            <div class="container">
+                <h2 class="section-title">Invited <span>Speakers</span></h2>
+                <div class="speaker-grid" id="speakers-container">
+                    <!-- Populated dynamically by app.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule Section -->
+        <section id="schedule">
+            <div class="container">
+                <h2 class="section-title">Workshop <span>Schedule</span></h2>
+                <div class="schedule-container" id="schedule-container">
+                    <!-- Populated dynamically by app.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Organizers Section -->
+        <section id="organizers">
+            <div class="container">
+                <h2 class="section-title">Workshop <span>Organizers</span></h2>
+                <div class="organizers-grid" id="organizers-container">
+                    <!-- Populated dynamically by app.js -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="mb-2">&copy; 2026 AI for Psychiatry Workshop. Co-located with EMBS 2026.</p>
+            <p class="text-muted small">Website created with custom neural backdrop. Click the gear icon below or press <kbd>Ctrl+M</kbd> to open Website Config Manager.</p>
+        </div>
+    </footer>
+
+    <!-- Admin Dashboard Trigger -->
+    <div class="admin-trigger" id="admin-trigger-btn" title="Open Administrative Panel" data-bs-toggle="modal" data-bs-target="#adminModal">
+        <i class="fas fa-cog"></i>
+    </div>
+
+    <!-- SPEAKER BIOGRAPHY MODAL -->
+    <div class="modal fade" id="speakerBioModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bioModalLabel">Speaker Biography</h5>
+                    <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body" id="bioModalBody">
+                    <!-- Loaded dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ADMIN PANEL MODAL (For uploading slides, editing updates, and exporting) -->
+    <div class="modal fade" id="adminModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><i class="fas fa-sliders-h me-2"></i>Website Config Manager (Local Admin)</h5>
+                    <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="admin-nav-tabs">
+                        <button class="admin-tab active" onclick="switchAdminTab('slides-tab', this)">
+                            <i class="fas fa-file-powerpoint me-1"></i> Upload Presenter Slides
+                        </button>
+                        <button class="admin-tab" onclick="switchAdminTab('news-tab', this)">
+                            <i class="fas fa-newspaper me-1"></i> Manage News & updates
+                        </button>
+                    </div>
+
+                    <!-- UPLOAD SLIDES TAB -->
+                    <div id="slides-tab" class="admin-panel-content active">
+                        <p class="text-secondary small mb-3">Upload slides for a talk slot. The uploaded file is saved locally to your browser and will be packaged in the exported config.</p>
+                        
+                        <div class="mb-3">
+                            <label for="upload-slot-select" class="form-label">Select Talk / Presentation Slot</label>
+                            <select class="form-select" id="upload-slot-select">
+                                <!-- Populated dynamically by app.js -->
+                            </select>
+                        </div>
+
+                        <div class="mb-4">
+                            <div class="upload-dropzone" id="slide-dropzone">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <h6>Drag & Drop presentation slides here</h6>
+                                <p class="text-muted small">Supports PDF, PPTX (Max 25MB)</p>
+                                <input type="file" id="slide-file-input" style="display: none;" accept=".pdf,.pptx,.ppt">
+                                <button type="button" class="btn btn-sm btn-outline-light mt-2" onclick="document.getElementById('slide-file-input').click()">Browse Files</button>
+                                <div id="upload-file-status" class="upload-file-status d-none">
+                                    <i class="fas fa-check-circle me-1"></i> File ready for export
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MANAGE NEWS TAB -->
+                    <div id="news-tab" class="admin-panel-content">
+                        <p class="text-secondary small mb-3">Add or delete posts in the Live Updates ticker.</p>
+                        
+                        <div class="admin-news-list" id="admin-news-list">
+                            <!-- Populated dynamically -->
+                        </div>
+
+                        <div class="glass-panel p-3 mt-3">
+                            <h6 class="mb-3"><i class="fas fa-plus-circle me-1"></i>Add New Update</h6>
+                            <div class="row g-3">
+                                <div class="col-md-8">
+                                    <label for="news-title" class="form-label">Update Title</label>
+                                    <input type="text" class="form-control" id="news-title" placeholder="e.g. Paper Submission Deadline Extended">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="news-tag" class="form-label">Category Tag</label>
+                                    <select class="form-select" id="news-tag">
+                                        <option value="Update">Update</option>
+                                        <option value="Call">Call</option>
+                                        <option value="Extended">Extended</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="news-content" class="form-label">Content details</label>
+                                    <textarea class="form-control" id="news-content" rows="2" placeholder="Brief details about this update..."></textarea>
+                                </div>
+                                <div class="col-12 text-end">
+                                    <button type="button" class="btn btn-premium btn-sm" onclick="addNewUpdate()">
+                                        <i class="fas fa-plus"></i> Add Post
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- EXPORT UTILITY (Crucial workflow step) -->
+                    <div class="mt-4 border-top pt-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div>
+                                <h6 class="mb-1 text-teal" style="color: var(--color-teal);"><i class="fas fa-download me-1"></i>Export Your Changes</h6>
+                                <p class="text-secondary small mb-0">Download the updated configuration to save it permanently.</p>
+                            </div>
+                            <button type="button" class="btn btn-premium" id="btn-export-config" onclick="exportDataFile()">
+                                <i class="fas fa-file-export"></i> Export data.js
+                            </button>
+                        </div>
+                        
+                        <div class="alert alert-info bg-dark border-secondary text-light mt-3 mb-0 small">
+                            <h6 class="alert-heading text-teal small fw-bold mb-1"><i class="fas fa-info-circle me-1"></i>How to persist your changes:</h6>
+                            <ol class="mb-0 ps-3">
+                                <li>Click <strong>Export data.js</strong> above.</li>
+                                <li>Save the file, replacing the existing <code>data.js</code> inside your project directory.</li>
+                                <li>If you uploaded slides, place the original slide files in a <code>slides/</code> folder in this project and ensure their filenames match what you uploaded.</li>
+                                <li>Commit and push the files to your server (e.g. GitHub pages) for everyone to see.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap and jQuery CDNs -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Project Script Files -->
+    <script src="data.js"></script>
+    <script src="synapse-animation.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
