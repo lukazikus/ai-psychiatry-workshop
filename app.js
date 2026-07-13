@@ -77,11 +77,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (speaker.socials.linkedin) socialsHTML += `<a href="${speaker.socials.linkedin}" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>`;
             }
 
+            const imgHTML = speaker.image 
+                ? `<img src="${speaker.image}" alt="${speaker.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                   <div class="speaker-img-placeholder" style="display: none; height: 100%; width: 100%; align-items: center; justify-content: center;"><i class="fas fa-user-md"></i></div>`
+                : `<div class="speaker-img-placeholder"><i class="fas fa-user-md"></i></div>`;
+
             card.innerHTML = `
                 <div class="speaker-img-container">
-                    <div class="speaker-img-placeholder">
-                        <i class="fas fa-user-md"></i>
-                    </div>
+                    ${imgHTML}
                 </div>
                 <h4 class="speaker-name">${speaker.name}</h4>
                 <div class="speaker-title">${speaker.title}</div>
@@ -111,13 +114,16 @@ document.addEventListener('DOMContentLoaded', () => {
             if (speaker.socials.linkedin) socialsHTML += `<a href="${speaker.socials.linkedin}" target="_blank" class="btn btn-sm btn-outline-light me-2"><i class="fab fa-linkedin me-1"></i> LinkedIn</a>`;
         }
 
+        const modalImgHTML = speaker.image 
+            ? `<img src="${speaker.image}" alt="${speaker.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+               <div class="speaker-img-placeholder" style="display: none; height: 100%; width: 100%; align-items: center; justify-content: center;"><i class="fas fa-user-md" style="font-size: 2.2rem;"></i></div>`
+            : `<div class="speaker-img-placeholder" style="display: flex; height: 100%; width: 100%; align-items: center; justify-content: center;"><i class="fas fa-user-md" style="font-size: 2.2rem;"></i></div>`;
+
         bioModalBody.innerHTML = `
             <div class="row align-items-center mb-4">
                 <div class="col-md-3 text-center mb-3 mb-md-0">
                     <div class="speaker-img-container m-0">
-                        <div class="speaker-img-placeholder">
-                            <i class="fas fa-user-md" style="font-size: 2.2rem;"></i>
-                        </div>
+                        ${modalImgHTML}
                     </div>
                 </div>
                 <div class="col-md-9">
@@ -205,11 +211,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (org.socials.linkedin) socialsHTML += `<a href="${org.socials.linkedin}" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>`;
             }
 
+            const imgHTML = org.image 
+                ? `<img src="${org.image}" alt="${org.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                   <div class="organizer-img-placeholder" style="display: none; height: 100%; width: 100%; align-items: center; justify-content: center;"><i class="fas fa-user-cog"></i></div>`
+                : `<div class="organizer-img-placeholder"><i class="fas fa-user-cog"></i></div>`;
+
             card.innerHTML = `
                 <div class="organizer-img-container">
-                    <div class="organizer-img-placeholder">
-                        <i class="fas fa-user-cog"></i>
-                    </div>
+                    ${imgHTML}
                 </div>
                 <div class="organizer-details">
                     <h5 class="organizer-name">${org.name}</h5>
