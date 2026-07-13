@@ -4,7 +4,7 @@ window.WORKSHOP_DATA = {
     "title": "AI for Psychiatry",
     "subtitle": "Bridging Computational Models and Clinical Care",
     "date": "July 26, 2026",
-    "location": "Metro Toronto Convention Center (Co-located with EMBS 2026)",
+    "location": "Metro Toronto Convention Center (Co-located with EMBC 2026)",
     "description": "The AI for Psychiatry workshop brings together machine learning researchers, computational psychiatrists, and clinical practitioners. Our goal is to foster collaboration and address key challenges in translating AI models into actionable clinical psychiatric settings. Topics include computational phenotyping, neuroimaging models, predictive clinical trials, and ethics of AI in mental health."
   },
   "speakers": [
@@ -214,13 +214,7 @@ window.WORKSHOP_DATA = {
       "date": "2026-07-13",
       "tag": "Update",
       "title": "Workshop Website Launched!",
-      "content": "Welcome to the official website of the AI for Psychiatry Workshop, co-located with EMBS 2026. Stay tuned for details regarding paper submissions and speaker slides."
-    },
-    {
-      "date": "2026-07-01",
-      "tag": "Call",
-      "title": "Call for Presentations & Demos",
-      "content": "We invite researchers to submit abstract presentations and software demos highlighting novel methodologies or applications of machine learning in psychiatric care."
+      "content": "Welcome to the official website of the AI for Psychiatry Workshop, co-located with EMBC 2026. Stay tuned for details regarding paper submissions and speaker slides."
     }
   ],
   "organizers": [
