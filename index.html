@@ -1,41 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI for Psychiatry Workshop - EMBC 2026</title>
-    <meta name="description" content="AI for Psychiatry: Bridging Computational Models and Clinical Care workshop, co-located with EMBC 2026. Join leading clinicians and ML researchers.">
-    
+    <meta name="description"
+        content="AI for Psychiatry: Bridging Computational Models and Clinical Care workshop, co-located with EMBC 2026. Join leading clinicians and ML researchers.">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/logo.png">
-    
+
     <!-- Open Graph Tags -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="AI for Psychiatry Workshop - EMBC 2026">
-    <meta property="og:description" content="Bridging Computational Models and Clinical Care. July 26, 2026 in Toronto, Canada.">
-    
+    <meta property="og:description"
+        content="Bridging Computational Models and Clinical Care. July 26, 2026 in Toronto, Canada.">
+
     <!-- CDNs -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <!-- Custom Style -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
     <!-- Navigation Menu -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="#home">
-                <img src="assets/logo.png" alt="AI for Psychiatry Logo" style="height: 38px; width: auto; margin-right: 12px; filter: drop-shadow(0 0 5px rgba(20, 184, 166, 0.3));">
+                <img src="assets/logo.png" alt="AI for Psychiatry Logo"
+                    style="height: 38px; width: auto; margin-right: 12px; filter: drop-shadow(0 0 5px rgba(20, 184, 166, 0.3));">
                 AI<span>.Psychiatry</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -56,16 +64,22 @@
                         <a class="nav-link" href="#organizers">Organizers</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="assets/Hands-On_AI_Psychiatry_Flyer.pdf" download><i class="fas fa-file-pdf me-1" style="font-size: 0.85rem; color: var(--color-teal);"></i>Flyer</a>
+                        <a class="nav-link" href="assets/Hands-On_AI_Psychiatry_Flyer.pdf" download><i
+                                class="fas fa-file-pdf me-1"
+                                style="font-size: 0.85rem; color: var(--color-teal);"></i>Flyer</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://embc.embs.org/2026/registration/" target="_blank" rel="noopener"><i class="fas fa-ticket-alt me-1" style="font-size: 0.85rem; color: var(--color-teal);"></i>Register</a>
+                        <a class="nav-link" href="https://embc.embs.org/2026/registration/" target="_blank"
+                            rel="noopener"><i class="fas fa-ticket-alt me-1"
+                                style="font-size: 0.85rem; color: var(--color-teal);"></i>Register</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="updatesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="updatesDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <span class="live-dot"></span> Updates
                         </a>
-                        <div class="dropdown-menu dropdown-menu-end updates-dropdown" aria-labelledby="updatesDropdown" id="news-dropdown-container">
+                        <div class="dropdown-menu dropdown-menu-end updates-dropdown" aria-labelledby="updatesDropdown"
+                            id="news-dropdown-container">
                             <div class="updates-title">Live Updates</div>
                             <div id="dropdown-news-list">
                                 <!-- Populated dynamically by app.js -->
@@ -108,22 +122,28 @@
         <section id="overview">
             <div class="container">
                 <h2 class="section-title">Workshop <span>Overview</span></h2>
-                
+
                 <div class="overview-intro mb-5 text-center" style="max-width: 900px; margin: 0 auto;">
-                    <p id="about-text-p" style="font-size: 1.15rem; line-height: 1.75; color: var(--text-secondary); margin-bottom: 25px;">
+                    <p id="about-text-p"
+                        style="font-size: 1.15rem; line-height: 1.75; color: var(--text-secondary); margin-bottom: 25px;">
                         <!-- Populated dynamically by app.js -->
                     </p>
-                    
-                    <div class="glass-panel p-3 d-flex align-items-center gap-3" style="border-left: 4px solid var(--color-teal); background: rgba(20, 184, 166, 0.05); text-align: left; max-width: 800px; margin: 0 auto;">
-                        <i class="fas fa-info-circle" style="color: var(--color-teal); font-size: 1.30rem; flex-shrink: 0;"></i>
+
+                    <div class="glass-panel p-3 d-flex align-items-center gap-3"
+                        style="border-left: 4px solid var(--color-teal); background: rgba(20, 184, 166, 0.05); text-align: left; max-width: 800px; margin: 0 auto;">
+                        <i class="fas fa-info-circle"
+                            style="color: var(--color-teal); font-size: 1.30rem; flex-shrink: 0;"></i>
                         <div class="small text-secondary" style="line-height: 1.45;">
-                            <strong class="text-white">Stay tuned:</strong> Details regarding workshop pre-exercises and the data usage agreement will be posted here soon.
+                            <strong class="text-white">Stay tuned:</strong> Details regarding workshop pre-exercises and
+                            the data usage agreement will be posted here soon.
                         </div>
                     </div>
                 </div>
 
-                <h3 class="mb-4 font-heading" style="color: var(--color-teal); font-size: 1.6rem; letter-spacing: -0.01em; margin-top: 40px;">Key Topics & Focus Areas</h3>
-                
+                <h3 class="mb-4 font-heading"
+                    style="color: var(--color-teal); font-size: 1.6rem; letter-spacing: -0.01em; margin-top: 40px;">Key
+                    Topics & Focus Areas</h3>
+
                 <div class="row g-4 justify-content-center text-start">
                     <!-- Card 1: Digital Phenotyping -->
                     <div class="col-lg-4 col-md-6">
@@ -132,8 +152,12 @@
                                 <i class="fas fa-mobile-alt"></i>
                             </div>
                             <div>
-                                <h4 class="highlight-title" style="font-size: 1.15rem; margin-bottom: 8px;">Digital Phenotyping & Multimodal Sensing</h4>
-                                <p class="highlight-desc mb-0" style="font-size: 0.92rem; line-height: 1.5;">How real-world behavioral and physiological signals from wearables, smartphones, speech, and clinical data can support psychiatric assessment and longitudinal monitoring.</p>
+                                <h4 class="highlight-title" style="font-size: 1.15rem; margin-bottom: 8px;">Digital
+                                    Phenotyping & Multimodal Sensing</h4>
+                                <p class="highlight-desc mb-0" style="font-size: 0.92rem; line-height: 1.5;">How
+                                    real-world behavioral and physiological signals from wearables, smartphones, speech,
+                                    and clinical data can support psychiatric assessment and longitudinal monitoring.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -144,8 +168,11 @@
                                 <i class="fas fa-chart-line"></i>
                             </div>
                             <div>
-                                <h4 class="highlight-title" style="font-size: 1.15rem; margin-bottom: 8px;">AI for Prediction & Treatment Support</h4>
-                                <p class="highlight-desc mb-0" style="font-size: 0.92rem; line-height: 1.5;">How machine learning can help identify risk patterns, forecast symptom changes, and inform personalized approaches to care.</p>
+                                <h4 class="highlight-title" style="font-size: 1.15rem; margin-bottom: 8px;">AI for
+                                    Prediction & Treatment Support</h4>
+                                <p class="highlight-desc mb-0" style="font-size: 0.92rem; line-height: 1.5;">How machine
+                                    learning can help identify risk patterns, forecast symptom changes, and inform
+                                    personalized approaches to care.</p>
                             </div>
                         </div>
                     </div>
@@ -156,8 +183,11 @@
                                 <i class="fas fa-comments"></i>
                             </div>
                             <div>
-                                <h4 class="highlight-title" style="font-size: 1.15rem; margin-bottom: 8px;">Generative AI & Conversational Agents</h4>
-                                <p class="highlight-desc mb-0" style="font-size: 0.92rem; line-height: 1.5;">How personalized, agentic chatbots may support engagement, psychoeducation, and symptom tracking when paired with appropriate safety guardrails.</p>
+                                <h4 class="highlight-title" style="font-size: 1.15rem; margin-bottom: 8px;">Generative
+                                    AI & Conversational Agents</h4>
+                                <p class="highlight-desc mb-0" style="font-size: 0.92rem; line-height: 1.5;">How
+                                    personalized, agentic chatbots may support engagement, psychoeducation, and symptom
+                                    tracking when paired with appropriate safety guardrails.</p>
                             </div>
                         </div>
                     </div>
@@ -168,8 +198,11 @@
                                 <i class="fas fa-project-diagram"></i>
                             </div>
                             <div>
-                                <h4 class="highlight-title" style="font-size: 1.15rem; margin-bottom: 8px;">Workflow Design for Psychiatric Research</h4>
-                                <p class="highlight-desc mb-0" style="font-size: 0.92rem; line-height: 1.5;">How to match clinical objectives with data sources, preprocessing strategies, model choices, evaluation methods, and interpretation tools.</p>
+                                <h4 class="highlight-title" style="font-size: 1.15rem; margin-bottom: 8px;">Workflow
+                                    Design for Psychiatric Research</h4>
+                                <p class="highlight-desc mb-0" style="font-size: 0.92rem; line-height: 1.5;">How to
+                                    match clinical objectives with data sources, preprocessing strategies, model
+                                    choices, evaluation methods, and interpretation tools.</p>
                             </div>
                         </div>
                     </div>
@@ -180,8 +213,11 @@
                                 <i class="fas fa-balance-scale"></i>
                             </div>
                             <div>
-                                <h4 class="highlight-title" style="font-size: 1.15rem; margin-bottom: 8px;">Responsible Translation</h4>
-                                <p class="highlight-desc mb-0" style="font-size: 0.92rem; line-height: 1.5;">How to address safety, bias, interpretability, privacy, clinical oversight, regulatory considerations, and ethical deployment in mental health AI.</p>
+                                <h4 class="highlight-title" style="font-size: 1.15rem; margin-bottom: 8px;">Responsible
+                                    Translation</h4>
+                                <p class="highlight-desc mb-0" style="font-size: 0.92rem; line-height: 1.5;">How to
+                                    address safety, bias, interpretability, privacy, clinical oversight, regulatory
+                                    considerations, and ethical deployment in mental health AI.</p>
                             </div>
                         </div>
                     </div>
@@ -222,12 +258,17 @@
         <!-- Sponsors Section -->
         <section id="sponsors" style="background: rgba(15, 23, 42, 0.15); padding: 60px 0;">
             <div class="container">
-                <h2 class="section-title" style="margin-bottom: 30px; font-size: 2rem;">Workshop <span>Sponsors</span></h2>
+                <h2 class="section-title" style="margin-bottom: 30px; font-size: 2rem;">Workshop <span>Sponsors</span>
+                </h2>
                 <div class="text-center mt-4">
-                    <div style="background: #ffffff; padding: 22px 45px; border-radius: 16px; display: inline-flex; align-items: center; justify-content: center; gap: 50px; box-shadow: 0 4px 25px rgba(0,0,0,0.25); max-width: 100%; flex-wrap: wrap;">
-                        <img src="assets/sri_logo.png" alt="Schwartz Reisman Institute Logo" style="max-height: 65px; max-width: 260px; object-fit: contain;">
-                        <div style="width: 2px; height: 50px; background-color: #cbd5e1;" class="d-none d-sm-block"></div>
-                        <img src="assets/uoft_logo.png" alt="University of Toronto Logo" style="max-height: 65px; max-width: 260px; object-fit: contain;">
+                    <div
+                        style="background: #ffffff; padding: 25px 50px; border-radius: 16px; display: inline-flex; align-items: center; justify-content: center; gap: 50px; box-shadow: 0 4px 25px rgba(0,0,0,0.25); max-width: 100%; flex-wrap: wrap;">
+                        <img src="assets/sri_logo.png" alt="Schwartz Reisman Institute Logo"
+                            style="max-height: 150px; max-width: 450px; object-fit: contain;">
+                        <div style="width: 2px; height: 70px; background-color: #cbd5e1;" class="d-none d-sm-block">
+                        </div>
+                        <img src="assets/uoft_logo.png" alt="University of Toronto Logo"
+                            style="max-height: 55px; max-width: 220px; object-fit: contain;">
                     </div>
                 </div>
             </div>
@@ -238,12 +279,15 @@
     <footer>
         <div class="container">
             <p class="mb-2">&copy; 2026 AI for Psychiatry Workshop. Co-located with EMBC 2026.</p>
-            <p class="text-muted small">Website created with custom neural backdrop. Click the gear icon below or press <kbd>Ctrl+M</kbd> to open Website Config Manager.</p>
+            <p class="text-muted small">Website created with custom neural backdrop. Click the gear icon below or press
+                <kbd>Ctrl+M</kbd> to open Website Config Manager.
+            </p>
         </div>
     </footer>
 
     <!-- Admin Dashboard Trigger -->
-    <div class="admin-trigger" id="admin-trigger-btn" title="Open Administrative Panel" data-bs-toggle="modal" data-bs-target="#adminModal">
+    <div class="admin-trigger" id="admin-trigger-btn" title="Open Administrative Panel" data-bs-toggle="modal"
+        data-bs-target="#adminModal">
         <i class="fas fa-cog"></i>
     </div>
 
@@ -269,7 +313,8 @@
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title"><i class="fas fa-sliders-h me-2"></i>Website Config Manager (Local Admin)</h5>
+                    <h5 class="modal-title"><i class="fas fa-sliders-h me-2"></i>Website Config Manager (Local Admin)
+                    </h5>
                     <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
                         <i class="fas fa-times"></i>
                     </button>
@@ -286,8 +331,9 @@
 
                     <!-- UPLOAD SLIDES TAB -->
                     <div id="slides-tab" class="admin-panel-content active">
-                        <p class="text-secondary small mb-3">Upload slides for a talk slot. The uploaded file is saved locally to your browser and will be packaged in the exported config.</p>
-                        
+                        <p class="text-secondary small mb-3">Upload slides for a talk slot. The uploaded file is saved
+                            locally to your browser and will be packaged in the exported config.</p>
+
                         <div class="mb-3">
                             <label for="upload-slot-select" class="form-label">Select Talk / Presentation Slot</label>
                             <select class="form-select" id="upload-slot-select">
@@ -300,8 +346,10 @@
                                 <i class="fas fa-cloud-upload-alt"></i>
                                 <h6>Drag & Drop presentation slides here</h6>
                                 <p class="text-muted small">Supports PDF, PPTX (Max 25MB)</p>
-                                <input type="file" id="slide-file-input" style="display: none;" accept=".pdf,.pptx,.ppt">
-                                <button type="button" class="btn btn-sm btn-outline-light mt-2" onclick="document.getElementById('slide-file-input').click()">Browse Files</button>
+                                <input type="file" id="slide-file-input" style="display: none;"
+                                    accept=".pdf,.pptx,.ppt">
+                                <button type="button" class="btn btn-sm btn-outline-light mt-2"
+                                    onclick="document.getElementById('slide-file-input').click()">Browse Files</button>
                                 <div id="upload-file-status" class="upload-file-status d-none">
                                     <i class="fas fa-check-circle me-1"></i> File ready for export
                                 </div>
@@ -312,7 +360,7 @@
                     <!-- MANAGE NEWS TAB -->
                     <div id="news-tab" class="admin-panel-content">
                         <p class="text-secondary small mb-3">Add or delete posts in the Live Updates ticker.</p>
-                        
+
                         <div class="admin-news-list" id="admin-news-list">
                             <!-- Populated dynamically -->
                         </div>
@@ -322,7 +370,8 @@
                             <div class="row g-3">
                                 <div class="col-md-8">
                                     <label for="news-title" class="form-label">Update Title</label>
-                                    <input type="text" class="form-control" id="news-title" placeholder="e.g. Paper Submission Deadline Extended">
+                                    <input type="text" class="form-control" id="news-title"
+                                        placeholder="e.g. Paper Submission Deadline Extended">
                                 </div>
                                 <div class="col-md-4">
                                     <label for="news-tag" class="form-label">Category Tag</label>
@@ -334,7 +383,8 @@
                                 </div>
                                 <div class="col-12">
                                     <label for="news-content" class="form-label">Content details</label>
-                                    <textarea class="form-control" id="news-content" rows="2" placeholder="Brief details about this update..."></textarea>
+                                    <textarea class="form-control" id="news-content" rows="2"
+                                        placeholder="Brief details about this update..."></textarea>
                                 </div>
                                 <div class="col-12 text-end">
                                     <button type="button" class="btn btn-premium btn-sm" onclick="addNewUpdate()">
@@ -349,21 +399,28 @@
                     <div class="mt-4 border-top pt-3">
                         <div class="d-flex align-items-center justify-content-between">
                             <div>
-                                <h6 class="mb-1 text-teal" style="color: var(--color-teal);"><i class="fas fa-download me-1"></i>Export Your Changes</h6>
-                                <p class="text-secondary small mb-0">Download the updated configuration to save it permanently.</p>
+                                <h6 class="mb-1 text-teal" style="color: var(--color-teal);"><i
+                                        class="fas fa-download me-1"></i>Export Your Changes</h6>
+                                <p class="text-secondary small mb-0">Download the updated configuration to save it
+                                    permanently.</p>
                             </div>
-                            <button type="button" class="btn btn-premium" id="btn-export-config" onclick="exportDataFile()">
+                            <button type="button" class="btn btn-premium" id="btn-export-config"
+                                onclick="exportDataFile()">
                                 <i class="fas fa-file-export"></i> Export data.js
                             </button>
                         </div>
-                        
+
                         <div class="alert alert-info bg-dark border-secondary text-light mt-3 mb-0 small">
-                            <h6 class="alert-heading text-teal small fw-bold mb-1"><i class="fas fa-info-circle me-1"></i>How to persist your changes:</h6>
+                            <h6 class="alert-heading text-teal small fw-bold mb-1"><i
+                                    class="fas fa-info-circle me-1"></i>How to persist your changes:</h6>
                             <ol class="mb-0 ps-3">
                                 <li>Click <strong>Export data.js</strong> above.</li>
-                                <li>Save the file, replacing the existing <code>data.js</code> inside your project directory.</li>
-                                <li>If you uploaded slides, place the original slide files in a <code>slides/</code> folder in this project and ensure their filenames match what you uploaded.</li>
-                                <li>Commit and push the files to your server (e.g. GitHub pages) for everyone to see.</li>
+                                <li>Save the file, replacing the existing <code>data.js</code> inside your project
+                                    directory.</li>
+                                <li>If you uploaded slides, place the original slide files in a <code>slides/</code>
+                                    folder in this project and ensure their filenames match what you uploaded.</li>
+                                <li>Commit and push the files to your server (e.g. GitHub pages) for everyone to see.
+                                </li>
                             </ol>
                         </div>
                     </div>
@@ -374,10 +431,11 @@
 
     <!-- Bootstrap and jQuery CDNs -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
+
     <!-- Project Script Files -->
     <script src="data.js"></script>
     <script src="synapse-animation.js"></script>
     <script src="app.js"></script>
 </body>
+
 </html>

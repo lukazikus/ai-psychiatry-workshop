@@ -77,7 +77,7 @@ window.WORKSHOP_DATA = {
     {
       "id": "mai_ali",
       "name": "Mai Ali",
-      "title": "Research Engineer & Developer",
+      "title": "PhD Candidate",
       "institution": "University of Toronto",
       "bio": "Mai Ali is a research engineer and developer at the University of Toronto. She designs interactive computational notebooks, pipelines, and machine learning models for clinical psychiatric research.",
       "image": "assets/organizers/Mai Ali-1 (1).jpg",
@@ -88,7 +88,7 @@ window.WORKSHOP_DATA = {
     {
       "id": "christopher_lucasius",
       "name": "Christopher Lucasius",
-      "title": "Research Engineer & Developer",
+      "title": "Postdoctoral Fellow",
       "institution": "University of Toronto",
       "bio": "Christopher Lucasius is a research engineer and developer at the University of Toronto. He specializes in computational frameworks, bio-signal data analytics, and hands-on AI tutorials for clinical practitioners.",
       "image": "assets/organizers/Chris.jpeg",
@@ -201,21 +201,21 @@ window.WORKSHOP_DATA = {
   ],
   "organizers": [
     {
-      "name": "Christopher Lucasius",
-      "title": "Research Engineer & Developer",
-      "institution": "University of Toronto",
-      "image": "assets/organizers/Chris.jpeg",
-      "socials": {
-        "linkedin": "https://www.linkedin.com/in/christopher-lucasius/"
-      }
-    },
-    {
       "name": "Mai Ali",
-      "title": "Research Engineer & Developer",
+      "title": "PhD Candidate",
       "institution": "University of Toronto",
       "image": "assets/organizers/Mai Ali-1 (1).jpg",
       "socials": {
         "linkedin": "https://www.linkedin.com/in/mai-ali-/"
+      }
+    },
+    {
+      "name": "Christopher Lucasius",
+      "title": "Postdoctoral Fellow",
+      "institution": "University of Toronto",
+      "image": "assets/organizers/Chris.jpeg",
+      "socials": {
+        "linkedin": "https://www.linkedin.com/in/christopher-lucasius/"
       }
     },
     {
