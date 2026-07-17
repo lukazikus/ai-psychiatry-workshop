@@ -44,7 +44,7 @@ window.WORKSHOP_DATA = {
     {
       "id": "matthew_flathers",
       "name": "Matthew Flathers",
-      "title": "Research Investigator",
+      "title": "Senior Engineer",
       "institution": "Beth Israel Deaconess Medical Center, Harvard University",
       "bio": "Matt Flathers is a senior engineer at the Division of Digital Psychiatry at Beth Israel Deaconess Medical Center. He builds LLM benchmarking infrastructure, purpose-built research tooling, and large-scale data pipelines. He has a half-decade of data engineering experience and focuses his work on bridging the gap between how clinicians and engineers think about using AI for research.",
       "image": "assets/speakers/Matthew.jpg",
@@ -55,7 +55,7 @@ window.WORKSHOP_DATA = {
     {
       "id": "christine_shi",
       "name": "Christine Shi",
-      "title": "Research Investigator",
+      "title": "Clinical Researcher",
       "institution": "Beth Israel Deaconess Medical Center, Harvard University",
       "bio": "Christine Shi is a clinical researcher at the Division of Digital Psychiatry at Beth Israel Deaconess Medical Center, where she draws on a background in psychology and data science to understand mental health through both lived experience and data. To this end, she has built data infrastructure for research studies, applied predictive ML to inform clinical insights, and created reports that share findings back to research participants.",
       "image": "assets/speakers/Christine.jpg",
@@ -79,7 +79,7 @@ window.WORKSHOP_DATA = {
       "name": "Mai Ali",
       "title": "PhD Candidate",
       "institution": "University of Toronto",
-      "bio": "Mai Ali is a research engineer and developer at the University of Toronto. She designs interactive computational notebooks, pipelines, and machine learning models for clinical psychiatric research.",
+      "bio": "Mai Ali is a PhD candidate at the University of Toronto. She designs interactive computational notebooks, pipelines, and machine learning models for clinical psychiatric research.",
       "image": "assets/organizers/Mai Ali-1 (1).jpg",
       "socials": {
         "linkedin": "https://www.linkedin.com/in/mai-ali-/"
@@ -88,9 +88,9 @@ window.WORKSHOP_DATA = {
     {
       "id": "christopher_lucasius",
       "name": "Christopher Lucasius",
-      "title": "Postdoctoral Fellow",
-      "institution": "University of Toronto",
-      "bio": "Christopher Lucasius is a research engineer and developer at the University of Toronto. He specializes in computational frameworks, bio-signal data analytics, and hands-on AI tutorials for clinical practitioners.",
+      "title": "Data Analyst",
+      "institution": "SickKids Hospital",
+      "bio": "Christopher Lucasius is a data analyst at SickKids Hospital. He specializes in computational frameworks, bio-signal data analytics, and hands-on AI tutorials for clinical practitioners.",
       "image": "assets/organizers/Chris.jpeg",
       "socials": {
         "linkedin": "https://www.linkedin.com/in/christopher-lucasius/"
@@ -211,8 +211,8 @@ window.WORKSHOP_DATA = {
     },
     {
       "name": "Christopher Lucasius",
-      "title": "Postdoctoral Fellow",
-      "institution": "University of Toronto",
+      "title": "Data Analyst",
+      "institution": "SickKids Hospital",
       "image": "assets/organizers/Chris.jpeg",
       "socials": {
         "linkedin": "https://www.linkedin.com/in/christopher-lucasius/"

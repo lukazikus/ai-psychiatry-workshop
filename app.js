@@ -435,6 +435,20 @@ document.addEventListener('DOMContentLoaded', () => {
         uploadFileStatus.classList.add('d-none');
     });
 
+    // Show admin trigger gear icon only if #admin is in the URL hash
+    const checkAdminHash = () => {
+        const adminBtn = document.getElementById('admin-trigger-btn');
+        if (adminBtn) {
+            if (window.location.hash === '#admin') {
+                adminBtn.style.setProperty('display', 'flex', 'important');
+            } else {
+                adminBtn.style.removeProperty('display');
+            }
+        }
+    };
+    window.addEventListener('hashchange', checkAdminHash);
+    checkAdminHash();
+
     // Init Page Run
     renderPage();
 });

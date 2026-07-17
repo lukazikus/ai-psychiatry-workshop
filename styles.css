@@ -701,6 +701,7 @@ header .container {
 
 /* Admin floating trigger */
 .admin-trigger {
+    display: none; /* Hidden by default */
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -710,7 +711,6 @@ header .container {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     backdrop-filter: blur(10px);
-    display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
