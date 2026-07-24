@@ -156,11 +156,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const catClass = getCategoryClass(item.category);
             
-            // Check slide status
+            // Check slide / notebook status
             const hasSlides = item.slidesUrl && item.slidesUrl.trim() !== "";
-            const btnLabel = hasSlides ? '<i class="fas fa-download me-1"></i> Slides' : 'Slides Unavailable';
+            const isExternal = hasSlides && (item.slidesUrl.startsWith('http://') || item.slidesUrl.startsWith('https://'));
+            const btnLabel = hasSlides 
+                ? (isExternal ? '<i class="fab fa-google me-1"></i> Notebook' : '<i class="fas fa-download me-1"></i> Slides') 
+                : 'Slides Unavailable';
             const btnClass = hasSlides ? 'btn-premium' : 'btn-premium disabled';
-            const downloadAttr = hasSlides ? `href="${item.slidesUrl}" download` : '';
+            const downloadAttr = hasSlides 
+                ? (isExternal ? `href="${item.slidesUrl}" target="_blank" rel="noopener"` : `href="${item.slidesUrl}" download`) 
+                : '';
 
             card.innerHTML = `
                 <div class="schedule-time-block">
