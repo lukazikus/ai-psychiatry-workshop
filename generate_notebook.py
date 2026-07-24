@@ -109,6 +109,8 @@ cells.append(code(
 'import glob\n'
 'import warnings\n'
 'import re\n'
+'import shutil\n'
+'import subprocess\n'
 'from collections import Counter\n'
 '\n'
 '# ---- Data & Numerical ----\n'
@@ -190,8 +192,7 @@ cells.append(md(
 '### \U0001f4c2 1.3 \u2014 Mount Google Drive & Configure Paths\n'
 '\n'
 '<div style="background: #e3f2fd; padding: 12px 16px; border-left: 5px solid #2196F3; border-radius: 4px;">\n'
-'\U0001f4dd <b>Edit <code>DATA_ROOT</code></b> below to point to the Google Drive folder containing your '
-'participant directories (e.g., <code>300_P</code>, <code>301_P</code>) and label CSV files.\n'
+'\U0001f4dd <b>Edit <code>DATA_ROOT</code></b> below to point to your E-DAIC dataset folder on Google Drive.\n'
 '</div>'
 ))
 
@@ -204,10 +205,10 @@ cells.append(code(
 '# CONFIGURATION -- EDIT THIS SECTION TO MATCH YOUR SETUP\n'
 '# ================================================================\n'
 '\n'
-'# Path to Google Drive folder containing participant folders and label CSVs\n'
-"DATA_ROOT = '/content/drive/MyDrive/E-DAIC/'  # <-- Change this path\n"
+'# Path to Google Drive folder containing participant directories and label CSVs\n'
+"DATA_ROOT = '/content/drive/MyDrive/data_tar_reduced/'  # <-- Change this path if needed\n"
 '\n'
-'# Label file names (train / dev / test) -- loose CSVs on Drive\n'
+'# Label file names (train / dev / test)\n'
 "TRAIN_LABELS_FILE = 'train_split_Depression_AVEC2019.csv'\n"
 "DEV_LABELS_FILE   = 'dev_split_Depression_AVEC2019.csv'\n"
 "TEST_LABELS_FILE  = 'test_split_Depression_AVEC2019.csv'\n"
@@ -225,43 +226,49 @@ cells.append(code(
 '# ---- Verify DATA_ROOT exists ----\n'
 'if not os.path.exists(DATA_ROOT):\n'
 '    print(f"\u274c DATA_ROOT not found: {DATA_ROOT}")\n'
-'    print("   Please update DATA_ROOT in the configuration above to point to your dataset folder.")\n'
+'    print("   Please update DATA_ROOT in the configuration above to point to your dataset folder on Google Drive.")\n'
 'else:\n'
 '    print(f"\u2705 DATA_ROOT exists: {DATA_ROOT}")\n'
 '\n'
-'# ---- Load labels and filter to available participant folders ----\n'
-'df_train = pd.read_csv(os.path.join(DATA_ROOT, TRAIN_LABELS_FILE))\n'
-'df_dev   = pd.read_csv(os.path.join(DATA_ROOT, DEV_LABELS_FILE))\n'
-'df_test  = pd.read_csv(os.path.join(DATA_ROOT, TEST_LABELS_FILE))\n'
+'# ---- Load labels and filter to available participant folders on Drive ----\n'
+'train_path = os.path.join(DATA_ROOT, TRAIN_LABELS_FILE)\n'
+'dev_path   = os.path.join(DATA_ROOT, DEV_LABELS_FILE)\n'
+'test_path  = os.path.join(DATA_ROOT, TEST_LABELS_FILE)\n'
 '\n'
-'# Find which participants have folders on Drive\n'
-'available_pids = set()\n'
-'for d in os.listdir(DATA_ROOT):\n'
-'    full = os.path.join(DATA_ROOT, d)\n'
-'    if os.path.isdir(full):\n'
-'        clean_d = d.replace("_P", "").replace("_p", "").split(".")[0].strip()\n'
-'        try:\n'
-'            pid = int(clean_d)\n'
-'            available_pids.add(pid)\n'
-'            available_pids.add(f"{pid}_P")\n'
-'        except ValueError:\n'
-'            available_pids.add(d)\n'
+'if os.path.exists(train_path) and os.path.exists(dev_path) and os.path.exists(test_path):\n'
+'    df_train = pd.read_csv(train_path)\n'
+'    df_dev   = pd.read_csv(dev_path)\n'
+'    df_test  = pd.read_csv(test_path)\n'
 '\n'
-'# Filter labels to only available participants\n'
-'n_before = len(df_train) + len(df_dev) + len(df_test)\n'
-'df_train = df_train[df_train["Participant_ID"].isin(available_pids) | df_train["Participant_ID"].astype(str).isin(available_pids)].reset_index(drop=True)\n'
-'df_dev   = df_dev[df_dev["Participant_ID"].isin(available_pids) | df_dev["Participant_ID"].astype(str).isin(available_pids)].reset_index(drop=True)\n'
-'df_test  = df_test[df_test["Participant_ID"].isin(available_pids) | df_test["Participant_ID"].astype(str).isin(available_pids)].reset_index(drop=True)\n'
+'    available_pids = set()\n'
+'    for d in os.listdir(DATA_ROOT):\n'
+'        full = os.path.join(DATA_ROOT, d)\n'
+'        if os.path.isdir(full):\n'
+'            clean_d = d.replace("_P", "").replace("_p", "").split(".")[0].strip()\n'
+'            try:\n'
+'                pid = int(clean_d)\n'
+'                available_pids.add(pid)\n'
+'                available_pids.add(f"{pid}_P")\n'
+'            except ValueError:\n'
+'                available_pids.add(d)\n'
 '\n'
-"df_train['Split'] = 'train'\n"
-"df_dev['Split']   = 'dev'\n"
-"df_test['Split']  = 'test'\n"
-'df_labels = pd.concat([df_train, df_dev, df_test], ignore_index=True)\n'
-"df_labels['Gender'] = df_labels['Gender'].str.strip()\n"
+'    n_before = len(df_train) + len(df_dev) + len(df_test)\n'
+'    if len(available_pids) > 0:\n'
+'        df_train = df_train[df_train["Participant_ID"].isin(available_pids) | df_train["Participant_ID"].astype(str).isin(available_pids)].reset_index(drop=True)\n'
+'        df_dev   = df_dev[df_dev["Participant_ID"].isin(available_pids) | df_dev["Participant_ID"].astype(str).isin(available_pids)].reset_index(drop=True)\n'
+'        df_test  = df_test[df_test["Participant_ID"].isin(available_pids) | df_test["Participant_ID"].astype(str).isin(available_pids)].reset_index(drop=True)\n'
 '\n'
-'print(f"\U0001f4c1 Found participant folders on Drive")\n'
-'print(f"\U0001f465 Using {len(df_labels)}/{n_before} participants: "\n'
-'      f"Train={len(df_train)}, Dev={len(df_dev)}, Test={len(df_test)}")'
+"    df_train['Split'] = 'train'\n"
+"    df_dev['Split']   = 'dev'\n"
+"    df_test['Split']  = 'test'\n"
+'    df_labels = pd.concat([df_train, df_dev, df_test], ignore_index=True)\n'
+"    df_labels['Gender'] = df_labels['Gender'].str.strip()\n"
+'\n'
+'    print(f"\\n\U0001f4ca Labels loaded successfully!")\n'
+'    print(f"\U0001f465 Active dataset size: {len(df_labels)} participants (Train={len(df_train)}, Dev={len(df_dev)}, Test={len(df_test)})")\n'
+'else:\n'
+'    print(f"\\n\u26a0\ufe0f Label CSV files not found in {DATA_ROOT}.")\n'
+'    print(f"   Please check that label CSV files exist in your Google Drive folder.")'
 ))
 
 # --- Seeds + GPU ---

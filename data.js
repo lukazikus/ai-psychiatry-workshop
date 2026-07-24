@@ -169,7 +169,7 @@ window.WORKSHOP_DATA = {
       "category": "Keynote",
       "title": "Hands-on activity with Interactive notebook-based AI workflow for psychiatry",
       "speaker": "Mai Ali & Christopher Lucasius",
-      "description": "A guided, interactive coding session building, running, and exploring computational models and data prep workflows for clinical evaluations.",
+      "description": "A guided, interactive coding session building, running, and exploring computational models and data prep workflows for clinical evaluations using E-DAIC (requires signed data usage agreement with USC ICT).",
       "slidesUrl": ""
     },
     {
